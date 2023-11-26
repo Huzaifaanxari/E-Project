@@ -1,4 +1,4 @@
-/* .form {
+.form {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -195,4 +195,4 @@
    .fancy:hover .bottom-key-2 {
     right: 0;
     width: 0;
-  } */
+  }
