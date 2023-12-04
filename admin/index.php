@@ -1,4 +1,8 @@
 <?php 
+session_start();
+  if(!isset($_SESSION['admin_login'])){
+    header("Location:login.php");
+  }
   include 'conn.php';
   $query = "SELECT * FROM `admin` WHERE 1;";
   $data = mysqli_query($conn,$query);
@@ -6,34 +10,21 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Mes styles-->
-  <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="style2.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard 2 </title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dashbord2.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
-
 <body>
+    <?php include 'Components/sidebar2.php' ?>
 
-  <?php include 'Components/Sidebar.php'?>
-  <!-- My Main Content -->
-  <div class="mainContent">
-    <nav>
-
-      <div class="user">
-        Helo Sir
-      </div>
-
-    </nav>
-
-    <!-- My Box Content -->
-    <div class="boxContent">  
-        <div class="profile-card js-profile-card">
+    <section class="home-section">
+    <div class="profile-card js-profile-card">
           <div class="profile-card__img">
             <img src="img/admin.png" alt="profile card">
           </div>
@@ -79,12 +70,7 @@
 
 
         </div>
-
-        
-
-    </div>
-  </div>
-
+    </section>
+<script src="script.js"></script>
 </body>
-
 </html>

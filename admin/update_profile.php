@@ -29,43 +29,18 @@ if (isset($_POST['update'])) {
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="dashbord2.css">
 
 </head>
 
 <body>
 
-  <!-- My Side Barre -->
-  <div class="sideBarre">
-    <div class="sideBarre__logo">
-      <div class="sideBarre__cercle">
-
-      </div>
-      <h1>Admin</h1>
-    </div>
-    <div class="sideBarre__menu">
-      <ul>
-        <li><a href="index.php">Profile</a></li>
-        <li><a href="products.php">Product</a></li>
-        <li><a href="employees.php">Employees</a></li>
-        <li><a href="orders.php">Order</a></li>
-        <li><a href="feedback.php">Feedback</a></li>
-        <li><a href="faq.php">FAQ</a></li>
-      </ul>
-    </div>
-  </div>
+  <?php include 'Components/sidebar2.php' ?>
 
   <!-- My Main Content -->
-  <div class="mainContent">
-    <nav>
-
-      <div class="user">
-        Helo Sir
-      </div>
-
-    </nav>
-
-    <!-- My Box Content -->
-    <div class="boxContent">
+    <div class="home-section" style="padding: 2rem">
 
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Update Profile</h1>
 
@@ -93,8 +68,8 @@ if (isset($_POST['update'])) {
 
 
     </div>
-  </div>
 
+<script src="script.js"></script>
 </body>
 
 </html>
